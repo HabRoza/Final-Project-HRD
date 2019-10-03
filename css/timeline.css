@@ -1,0 +1,205 @@
+#name {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 15px;
+    color: #fff;
+    line-height: 60px;
+  
+    text-align: center;
+    background: #8e0038;
+    float: left;
+    margin: 9px 5px 5px 30px;
+  }
+  .bglogo{
+      background-color:#bdbdbd;
+      width: 100%;
+      height: 80px;
+
+
+  }
+  #timeline{
+      padding-top: 18px ;
+      font-family: 'Colonna MT';
+      color:#8e0038; 
+  
+      margin-left: 100px;
+      
+  }
+  .navcolor{
+      position: fixed;
+      background-color: #007065;
+  
+
+    
+  }
+  #up{
+      margin-top: -8px;
+      /* position: fixed; */
+
+  }
+  a{
+      font-size: 20px;
+      font-family: 'Bahnschrift Condensed';
+      margin-left: 15px;
+  }
+
+
+  li a:before{
+    content: '';
+    width: 100px;
+    position: absolute;
+    border-bottom:  5px solid #bdbdbd;
+ 
+    bottom: 0;
+    right: 350px;
+    transition: 0.7s all;
+  }
+
+   li a:hover:before{
+    right: 0;
+  
+  }
+  li a:hover{
+background-color: #8e0038;
+      }
+  
+ 
+  .img1{
+      width: 270px;
+      height: 400px;
+      margin-left: 0px;     
+      
+
+  }
+  #content{
+      margin-left: 60px ;
+      margin-right: 90px;
+  }
+  .img234{
+    margin-left: 2px;
+  }
+  #ent{
+      margin-bottom: 50px;
+  }
+ 
+  .imghover img:hover{
+      transform: scale(1.01);
+      opacity: 0.8;
+
+  }
+  .entertainment{
+      width: 1230px;
+      height: 500px;
+      /* background-color:teal; */
+      box-shadow: 3px 3px 3px 3px #bdbdbd;
+
+  }
+  
+ /* h2{
+    font-family: 'Bahnschrift Condensed';
+
+
+
+} */
+ h2 {
+    /* font-size: 2rem; */
+    margin-top: -20px;
+    /* position: absolute; */
+}
+.size{
+ 
+    /* border: 3px solid red; */
+
+    width: 1223px;
+
+}
+
+.more{
+
+
+ background:  no-repeat scroll 57px 9px red; 
+color: #FFF;
+
+font-size: 20px;
+font-weight: bold;
+padding: 4px 20px;
+position: absolute;
+right: 59px;
+margin-top: -24px;
+text-transform: uppercase;
+margin-right: -20px;
+
+}
+
+.mycard{
+    height: 500px;
+}
+.techmore{
+    background: no-repeat scroll 57px 9px #009688;
+    margin-top: -31px;
+    
+  
+}
+.techsize{
+    border: 3px solid #009688;
+
+}
+.sportsize{
+    border: 3px solid #8c9900;
+
+}
+.excerisesize{
+    border: 3px solid #34515e;
+
+}
+.contact{
+    text-align: center;
+}
+.iconfooter{
+    margin-left: -200px;
+}
+  
+.headercolor{
+    background-color: #000063;
+}
+.register{
+    margin: -6px 0 0 -300px;
+}
+.fix{
+    position: fixed;
+}
+  
+.aboutme{
+    font-size: 20px;
+}
+.contentaboutus{
+   margin-left: 230px;
+}
+  
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  
+  .sticky + .content {
+    padding-top: 102px;
+  }
+  .header {
+    padding: 10px 16px;
+    background: #555;
+    color: #f1f1f1;
+  }
+  
+  .content {
+    padding: 16px;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  
+
+ 
