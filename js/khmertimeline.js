@@ -4,17 +4,22 @@ $(document).ready(function() {
     getAllArticles();
 })
 
+$('#search').keyup(function(){
+    searchArticle($(this).val())
+})
+
+
 function getArticles() {
     var content = '';
     $.ajax({
-        url : 'http://www.api-ams.me/v1/api/articles?page=1&limit=4',
+        url : 'http://www.api-ams.me/v1/api/articles?page=1&limit=8',
         method : 'GET',
         success : function(response) {
             
             for(res of response.DATA) {
                 
                 content += `
-                <div class="col-sm-3">
+                <div class="col-md-4 col-sm-6 mb-5">
                 <!-- Card Wider -->
                 <div class="card card-cascade wider">
       
@@ -85,7 +90,7 @@ function getArticleList(page) {
                        </div>
                     <div class="col-sm-8">  
                         <h2>${response.DATA[p].TITLE}</h2> 
-                        <h5>${response.DATA[p].AUTHOR.NAME}</h5>
+                   
                         <p>${response.DATA[p].DESCRIPTION.substring(0,100)}...</p>
                     </div>
                 </div>`;
@@ -144,4 +149,19 @@ function getArticle(id) {
 function clickPage(li) {
     $('.page-item-list').removeClass('active');
     $(li).addClass('active')
+}
+
+
+function searchArticle(title){
+    $.ajax({
+        url: `http://api-ams.me/v1/api/articles?title=${title}&page=1&limit=15`,
+        method: "GET",
+        success: function(res){
+            // (res.MESSAGE)
+            getAllArticles();
+        },
+        error: function(er){
+            console.log(er)
+        }
+    })
 }
