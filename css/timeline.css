@@ -38,14 +38,8 @@
       /* position: fixed; */
 
   }
-  a{
-      font-size: 20px;
-      font-family: 'Bahnschrift Condensed';
-      margin-left: 15px;
-  }
-
-
-  li a:before{
+  
+  /* li a:before{
     content: '';
     width: 100px;
     position: absolute;
@@ -63,7 +57,7 @@
   li a:hover{
 background-color: #8e0038;
       }
-  
+   */
  
   .img1{
       width: 270px;
@@ -90,18 +84,11 @@ background-color: #8e0038;
   }
   .entertainment{
       width: 100%;
-      /* height: 500px; */
-      /* background-color:teal; */
       box-shadow: 3px 3px 3px 3px #bdbdbd;
       margin: 0 auto;
   }
   
- /* h2{
-    font-family: 'Bahnschrift Condensed';
 
-
-
-} */
  h2 {
     /* font-size: 2rem; */
     margin-top: -20px;
@@ -117,7 +104,7 @@ width: 100%;
 .more{
 
 
- background:  no-repeat scroll 57px 9px red; 
+ background:  no-repeat scroll 57px 9px #b71c1c; 
 color: #FFF;
 
 font-size: 20px;
@@ -177,28 +164,106 @@ margin-right: -60px;
 }
   
 
-.sticky {
-    position: fixed;
-    top: 0;
+
+  
+nav {
     width: 100%;
-    z-index: 999;
+    background: #009688;
+    height: 80px;
+
   }
+
+  ul {
+    width: 80%;
+    margin: 0  ;
   
-  .sticky + .content {
-    padding-top: 102px;
+
+    padding: auto;
+
   }
-  .header {
-    padding: 10px 16px;
-    background: #555;
-    color: #f1f1f1;
+
+  ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+    
+
   }
+
+  /* ul li:hover{
+   background: olive;
+
+ } */
+  ul li a {
+    color: #e8f5e9;
+    text-decoration: none;
   
-  .content {
-    padding: 16px;
   }
-  html{
-    scroll-behavior: smooth;
+
+  @media (max-width: 768px) {
+    ul {
+      width: 100%;
+
+    }
+
+    ul li {
+      display: block;
+      text-align: center;
+
+    }
   }
+  body {
+  margin: 0;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #007065 ;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: darkred;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
   
 
  

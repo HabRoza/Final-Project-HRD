@@ -15,6 +15,8 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.9/css/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
 </head>
 
 <body>
@@ -25,54 +27,18 @@
   <div id="name" class="bglogo">Khmer</div>
   <h1 id="timeline">TimeLine </h1>
   <br>
+        <button type="button" class="btn" data-toggle="modal" data-target="#centralModalDanger" style="background-color:#c75b39 ; color: cornsilk;
+        border-radius: 20px; float: right;">Register </button>
+      <br>
+      <br>
+      <br>
+      <div id="navbar">
+        <a class="active" href="#">Home</a>
+        <a href="entertainmentlist.html">News</a>
+        <a href="#">About Us</a>
 
+      </div>
 
-<div class="myHeader" id="myHeader">
-  <!--Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-dark navcolor header">
-
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="basicExampleNav">
-
-      <!-- Links -->
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#"><i class="fas fa-home"></i>
-            <span class="sr-only">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="entertainmentlist.html">Entertainment</a>
-        </li>
-       
-        <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
-        </li>
-
-        <li class="nav-item" style="margin-left: 100px;">
-          <!-- <button type="button" class="btn btn-outline-secondary waves-effect">Secondary</button> -->
-          <button type="button" class="btn" data-toggle="modal" data-target="#centralModalDanger"
-            style="background-color: #c79100; color: cornsilk; border-radius: 20px;">Register </button>
-        </li>
-
-
-
-      </ul>
-      <!-- Links -->
-
-      <form class="form-inline">
-        <div class="md-form my-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        </div>
-      </form>
-    </div>
-
-    <!-- Collapsible content -->
-
-  </nav>
-</div>
-  <!--/.Navbar-->
 
 
   
@@ -208,74 +174,88 @@
     </div>
     <!-- Grid column -->
 
-    <!-- pop up Register -->
-    <!-- Central Modal Medium Danger -->
-    <div class="modal fade" id="centralModalDanger" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-notify" role="document">
-        <!--Content-->
-        <div class="modal-content">
-          <!--Header-->
-          <div class="modal-header" style=" background-color: #4baea0;">
-            <p class="heading lead" style="padding-left: 140px; font-weight: bold; font-size: 30px; color: black;">
-              Register for free</p>
+   
+  <!-- pop up Register -->
+  <!-- Central Modal Medium Danger -->
+  <div class="modal fade" id="centralModalDanger" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-notify" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header" style=" background-color: #4baea0;">
+        <p class="heading lead" style="padding-left: 140px; font-weight: bold; font-size: 30px; color: black;">
+          Register for free</p>
 
 
+      </div>
+
+      <!--Body-->
+      <div class="modal-body" style="background-color: #e8f5e9;">
+        <div class="modal-body mx-3">
+          <div class="md-form mb-5">
+            <!-- <i class="fas fa-envelope prefix grey-text"></i> -->
+            <input type="text" id="username" class="form-control validate">
+            <label data-error="wrong" data-success="right" for="defaultForm-email">User Name</label>
+          </div>
+          <div class="md-form mb-4">
+              <!-- <i class="fas fa-lock prefix grey-text"></i> -->
+              <label data-error="wrong" data-success="right" for="defaultForm-pass">Gender</label>
+             <br> <br>
+              <div class="row">
+                <div class="col-sm-6">
+                    <input type="radio" id="male" name="gender">Male
+                </div>
+                <div class="col-sm-6">
+                      
+               <input type="radio" id="female" name="gender">Female
+                </div>
+              </div>
+             
+             
+            </div>
+
+          
+          <div class="md-form mb-4">
+            <!-- <i class="fas fa-lock prefix grey-text"></i> -->
+            <input type="text" id="age" class="form-control validate">
+            <label data-error="wrong" data-success="right" for="defaultForm-pass">Age</label>
+          </div>
+          <div class="md-form mb-4">
+            <!-- <i class="fas fa-lock prefix grey-text"></i> -->
+            <input type="text" id="city" class="form-control validate">
+            <label data-error="wrong" data-success="right" for="defaultForm-pass">City</label>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+
+                <a href="register.html">
+                    <button type="button" onclick="register()" class="btn btn-primary">Register</button>
+                </a>
+
+
+            </div>
+            <div class="col-sm-6">
+                <button type="button" class="btn btn-mdb-color" data-dismiss="modal" aria-label="Close">Cancel</button>
+
+            </div>
           </div>
 
-          <!--Body-->
-          <div class="modal-body" style="background-color: #e8f5e9;">
-            <div class="modal-body mx-3">
-              <div class="md-form mb-5">
-                <!-- <i class="fas fa-envelope prefix grey-text"></i> -->
-                <input type="text" id="username" class="form-control validate">
-                <label data-error="wrong" data-success="right" for="defaultForm-email">User Name</label>
-              </div>
 
-              <div class="md-form mb-4">
-                <label data-error="wrong" data-success="right" for="defaultForm-pass">Gender</label>
-              </div>
-              <div class="md-form mb-4">
-                <!-- <i class="fas fa-lock prefix grey-text"></i> -->
-                <input type="text" id="age" class="form-control validate">
-                <label data-error="wrong" data-success="right" for="defaultForm-pass">Age</label>
-              </div>
-              <div class="md-form mb-4">
-                <!-- <i class="fas fa-lock prefix grey-text"></i> -->
-                <input type="text" id="city" class="form-control validate">
-                <label data-error="wrong" data-success="right" for="defaultForm-pass">City</label>
-              </div>
-            
-      
-                    <a type="button" class="btn btn btn-unique  register" style="margin-left: 0px;">Register</a>
-      
-      
-      
-                  </div>
-                  <div class="col-sm-6">
-                    <button type="button" class="btn btn-mdb-color" style="margin-left: 200px; margin-top: -120px;" data-dismiss="modal" aria-label="Close">Cancel</button>
-      
-                  </div>
-                <!-- </div> -->
-      
-      
-        
-              <!--/.Content-->
-            </div>
-            <!-- </!--> 
 
-            </div>
+
+        </div>
+      </div>
+     
+      <!-- </div> -->
+
+
+      <!--/.Content-->
+    </div>
+    <!-- </!-->
+
+  </div>
 </div>
-          </div>
-  
-    
-      <!-- end content -->
-
-
-
-
-          <!--Footer-->
-         
   
    
 
@@ -325,7 +305,10 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.9/js/mdb.min.js"></script>
-<script src="../js/timeline.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+  <script src="../js/khmertimeline.js"> </script>
+
 
 </body>
 

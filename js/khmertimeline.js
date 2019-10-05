@@ -1,3 +1,17 @@
+
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
 var currentPage = 1;
 $(document).ready(function() {
     getArticles();
@@ -37,8 +51,7 @@ function getArticles() {
                     <!-- Title -->
                     <h4 class="card-title"><strong>${res.TITLE}</strong></h4>
                     <!-- Subtitle -->
-                    <h5 class="blue-text pb-2"><strong>${res.AUTHOR.NAME}</strong></h5>
-                    <!-- Text -->
+                    
                     <p class="card-text">${res.DESCRIPTION}</p>
       
                   </div>
@@ -56,6 +69,8 @@ function getArticles() {
         }
     })
 }
+{/* <h5 class="blue-text pb-2"><strong>${res.AUTHOR.NAME}</strong></h5>
+                    <!-- Text --> */}
 
 function getAllArticles(page, limitPerPage) {
     limitPerPage = this.limitPerPage;
@@ -164,4 +179,17 @@ function searchArticle(title){
             console.log(er)
         }
     })
+}
+
+
+
+function register(){
+        let name = document.getElementById('username').value ;
+            let gender = document.getElementById('gender').value ;
+            let age = document.getElementById('age').value ;
+            let city = document.getElementById('city').value ;
+           
+            document.write(name);
+        document.getElementById('usr').innerHTML =name;
+        alert(name);
 }
